@@ -35,7 +35,7 @@
     {% block layout_navigation_flyout_content %}
         <div class="row navigation-flyout-content">
             {% block layout_navigation_flyout_categories %}
-                <div class="{% if category.media %}col-7 col-xl-7{% else %}col{% endif %}">
+                <div class="{% if category.media %}col-12 {% else %}col-12{% endif %}">
                     <div class="navigation-flyout-categories">
                         {% block layout_navigation_flyout_categories_recoursion %}
                             {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {
