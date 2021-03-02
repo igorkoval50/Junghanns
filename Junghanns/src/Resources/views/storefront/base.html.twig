@@ -12,3 +12,8 @@
   {% endblock %}
    {% block base_navigation %}
    {% endblock %}
+
+{% block base_script_hmr_mode %}
+    <template data-swag-allco-swiper-slider></template>
+    {{ parent() }}
+{% endblock %}

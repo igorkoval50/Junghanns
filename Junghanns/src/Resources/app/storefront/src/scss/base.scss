@@ -1,9 +1,12 @@
+@import "vendor/swiper";
 @import "abstracts/color";
 @import "abstracts/fonts";
 @import "abstracts/mixins";
 
 @import "layout/header";
 @import "layout/footer";
+
+@import "element/manufacture";
 
 @import "page/home";
 @import "page/listing";
