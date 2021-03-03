@@ -26,29 +26,31 @@
                 {% endif %}
 
                 {% block element_product_slider_slider %}
-                    <div class="swiper-container swiper-containers itDelight-custom-slider swiper-container-product"  data-product-slider="true"
+                    <div class="swiper-container swiper-container-product"  data-product-slider="true"
                          data-product-slider-options="{{ productSliderOptions|json_encode }}">
                         {% block element_product_slider_title %}
-                            {% if sliderConfig.title.value %}
-                                <div class="cms-element-title">
-                                    <h2 class="slider-headline">{{ sliderConfig.title.value }}</h2>
-                                </div>
-                            {% endif %}
                         {% endblock %}
                         <div class="swiper-wrapper" data-base-slider-container="true">
-                            {% for product in element.data.products.elements %}
                                 {% block element_product_slider_inner_item %}
                                     <div class="swiper-slide">
-                                        {% sw_include '@Storefront/storefront/component/product/card/box-custom.html.twig' %}
+                                        {% if sliderConfig.title.value %}
+                                            <div class="cms-element-title">
+                                                {{ sliderConfig.title.value|raw }}
+                                            </div>
+                                        {% endif %}
                                     </div>
+                                    {% for product in element.data.products.elements %}
+                                    <div class="swiper-slide">
+                                        {% sw_include '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+                                    </div>
+                                    {% endfor %}
                                 {% endblock %}
-                            {% endfor %}
                     </div>
-                        <div class="swiper-button-next">
-                            <div class="arrow-text">
-                                <span>{{ 'sliderArrowText'|trans }}</span>
-                            </div>
-                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                 {% endblock %}
         {% endblock %}
     </div>

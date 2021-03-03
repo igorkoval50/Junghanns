@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap');
+
 html, body {
   overflow-x: hidden;
+  font-family: 'Maven Pro', sans-serif;
 }
 p, span, div, a  {
   font-size: 18px;
   color: $regular;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 h1 {
   font-size: 52px;
+  font-family: 'Maven Pro', sans-serif;
 }
 h2 {
   font-size: 52px;
+  font-family: 'Maven Pro', sans-serif;
 }
 
-//h1 {
-//  font-size: 84px;
-//}
+

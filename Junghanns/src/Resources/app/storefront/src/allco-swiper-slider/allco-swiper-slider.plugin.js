@@ -68,5 +68,51 @@ export default class AllcoSwiperSlider extends Plugin {
             //     swiperBrandsElement.slideNext();
             // });
         }
+
+        if (document.querySelectorAll('.swiper-container-product').length > 0) {
+            //product slider
+
+            let swiperBrandsElement = new Swiper('.swiper-container-product', {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+                freeMode: true,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                watchSlidesVisibility: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'progressbar'
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 15,
+                    },
+                    576: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 24,
+                    },
+                }
+            });
+
+            // const swiperPrevTwo = document.getElementById('swiperPrevTwo');
+            // const swiperNextTwo = document.getElementById('swiperNextTwo');
+            //
+            // swiperPrevTwo.addEventListener('click', () => {
+            //     swiperBrandsElement.slidePrev();
+            // });
+            // swiperNextTwo.addEventListener('click', () => {
+            //     swiperBrandsElement.slideNext();
+            // });
+        }
     }
 }
