@@ -4,6 +4,9 @@
             "imageText": {
                 "brands": {
                     "label": "brands image slider"
+                },
+                "fourImages": {
+                    "label": "four images and texts"
                 }
             }
         }
