@@ -10,7 +10,7 @@
 
         {% for priceElement in product.price.elements %}
             {% if priceElement.gross %}
-                <span class="low-price"> {{ priceElement.gross|currency }}</span>
+                <span class="{% if priceElement.listPrice.gross %}low-price {% else %} product-price{% endif %}"> {{ priceElement.gross|currency }}</span>
             {% endif %}
 
             {% if priceElement.listPrice.gross %}
