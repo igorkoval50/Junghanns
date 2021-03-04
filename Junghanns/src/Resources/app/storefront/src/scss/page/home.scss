@@ -38,4 +38,20 @@
   .cms-section.pos-1 {
     border-bottom: 6px solid $green;
   }
+  .cms-section.pos-3 {
+    padding-top: 120px;
+    .pos-0 {
+      margin-bottom: 30px;
+      text-align: center;
+      h2 {
+        line-height: 62px;
+        margin-bottom: 0;
+        color: $green;
+      }
+    }
+    .pos-3 {
+      max-width: 1003px;
+      margin: 25px auto 0;
+    }
+  }
 }
