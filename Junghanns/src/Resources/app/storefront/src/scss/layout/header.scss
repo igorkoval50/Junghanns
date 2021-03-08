@@ -1,9 +1,88 @@
 .header-main {
   padding-top: 9px;
+  @media (max-width: 991px) {
+    padding-top: 0;
+  }
   .container {
     max-width: 100%;
     padding-right: 0;
     padding-left: 40px;
+    @media (max-width: 1024px) {
+      padding-left: 20px;
+      .header-search-col {
+        .col {
+          padding-left: 0;
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      .header-search-col {
+        display: flex;
+        justify-content: center;
+        .row {
+          .col {
+            margin-top: 31px;
+          }
+        }
+      }
+      .header-logo-col {
+        margin-left: 10px;
+      }
+      .nav-main-toggle-btn {
+        display: flex;
+      }
+    }
+    @media (max-width: 620px) {
+      .header-search-col {
+        .row {
+          .col {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      .header-row {
+        .icon svg {
+          color: $regular;
+        }
+        .icon-bag:before {
+          filter: brightness(45%);
+        }
+        .header-actions-col:before {
+          width: auto;
+        }
+        .header-logo-col {
+          position: absolute;
+          top: -11px;
+          left: 40px;
+          z-index: 10;
+          margin-left: 30px;
+          padding: 0;
+          max-width: 100px;
+        }
+        .header-actions-col {
+          padding-right: 30px;
+        }
+        .menu-button {
+          margin-top: 3px;
+        }
+        .icon-search {
+          width: 21px;
+          height: 21px;
+        }
+        .header-actions-btn{
+          padding-right: 0;
+        }
+        .header-cart-btn {
+          padding-top: 4px;
+          padding-right: 8px;
+        }
+        .header-search-col {
+          min-width: 100%;
+        }
+      }
+    }
   }
   .main-navigation-link-text {
     position: relative;
@@ -45,6 +124,12 @@
       top: -33px;
       display: block;
       border-bottom-left-radius: 1em 5em;
+    }
+    @media (max-width: 1300px) {
+      padding-right: 15px;
+      &:before {
+        width: 200px;
+      }
     }
   }
   .header-search {
@@ -140,5 +225,31 @@
   .main-navigation-link {
     padding-right: 45px;
     font-weight: 600;
+  }
+  @media (max-width: 1550px) {
+    padding-left: 0;
+    max-width: 50%;
+  }
+  @media (max-width: 1349px) {
+    max-width: 47%;
+    .main-navigation-link {
+      padding-right: 25px;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+  @media (max-width: 1115px) {
+    max-width: 41%;
+    padding-right: 0;
+    .container {
+      padding-left: 0;
+    }
+    .main-navigation-link {
+      padding-right: 18px;
+      span {
+        font-size: 14px;
+      }
+    }
   }
 }
