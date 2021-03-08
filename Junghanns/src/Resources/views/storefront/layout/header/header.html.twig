@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
 
 {% block layout_header_logo %}
-    <div class="col-1">
+    <div class="col-1 d-block d-lg-none">
         <div class="col-sm-auto d-none d-sm-block d-lg-none">
             {% block layout_header_navigation_toggle_tablet %}
                 <div class="nav-main-toggle">
@@ -23,7 +23,7 @@
         {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
     </div>
 
-    <div class="nav-main d-none col-lg-7">
+    <div class="nav-main d-none d-lg-block col-lg-7">
         {% block base_navigation_inner %}
             {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
         {% endblock %}
