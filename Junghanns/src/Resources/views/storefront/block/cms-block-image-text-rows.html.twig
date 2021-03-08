@@ -3,7 +3,7 @@
     {% set id = element.id %}
 
     {% block block_image_text_row_left %}
-        <div class="col-md-3 image-text-wrapper">
+        <div class="col-sm-6 col-md-3 image-text-wrapper">
             {% block block_image_text_row_left_image %}
                 {% set element = block.slots.getSlot('left-image') %}
                 <div data-cms-element-id="{{ id }}">
@@ -22,7 +22,7 @@
     {% endblock %}
 
     {% block block_image_text_row_center %}
-        <div class="col-md-3 image-text-wrapper">
+        <div class="col-sm-6 col-md-3 image-text-wrapper">
             {% block block_image_text_row_center_image %}
                 {% set element = block.slots.getSlot('center-image') %}
                 <div data-cms-element-id="{{ id }}">
@@ -41,7 +41,7 @@
     {% endblock %}
 
     {% block block_image_text_row_right %}
-        <div class="col-md-3 image-text-wrapper">
+        <div class="col-sm-6 col-md-3 image-text-wrapper">
             {% block block_image_text_row_right_image %}
                 {% set element = block.slots.getSlot('right-image') %}
                 <div data-cms-element-id="{{ id }}">
@@ -60,7 +60,7 @@
     {% endblock %}
 
     {% block block_image_text_row_right_top %}
-        <div class="col-md-3 image-text-wrapper">
+        <div class="col-sm-6 col-md-3 image-text-wrapper">
             {% block block_image_text_row_right_top_image %}
                 {% set element = block.slots.getSlot('right-top-image') %}
                 <div data-cms-element-id="{{ id }}">

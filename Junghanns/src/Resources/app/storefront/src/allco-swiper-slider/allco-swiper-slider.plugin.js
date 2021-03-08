@@ -90,14 +90,22 @@ export default class AllcoSwiperSlider extends Plugin {
                 },
                 breakpoints: {
                     0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    480: {
                         slidesPerView: 2.5,
                         spaceBetween: 15,
                     },
-                    576: {
+                    630: {
                         slidesPerView: 2.5,
-                        spaceBetween: 30,
+                        spaceBetween: 15,
                     },
-                    992: {
+                    1140: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 24,
+                    },
+                    1150: {
                         slidesPerView: 3.5,
                         spaceBetween: 24,
                     },
