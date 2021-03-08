@@ -105,18 +105,21 @@
     }
   }
   .cms-section.pos-7 {
-   padding-top: 120px;
-    .cms-block-product-three-column {
-      padding-top: 40px;
-      .col-md-4:first-child {
-        padding-left: 40px;
-      }
-      .col-md-4:last-child {
-        padding-right: 40px;
-      }
+    padding-top: 120px;
+    .cms-element-text {
+      display: flex;
+      justify-content: center;
     }
+  }
+  .cms-section.pos-8 {
+   padding-top: 0;
     .btn-green {
-      margin: 20px auto 0;
+      margin: 24px auto 0;
+      font-size: 12px;
+    }
+    .cms-element-text {
+      display: flex;
+      justify-content: center;
     }
   }
 }

@@ -8,6 +8,11 @@
                 "fourImages": {
                     "label": "four images and texts"
                 }
+            },
+            "commerce": {
+                "productFourColumn": {
+                    "label": "four product column"
+                }
             }
         }
     }

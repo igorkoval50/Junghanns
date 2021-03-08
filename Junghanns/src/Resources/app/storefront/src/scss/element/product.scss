@@ -17,6 +17,9 @@
     transition: all .3s;
     .low-price {
       font-size: 20px;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
   .card-body {
@@ -43,11 +46,17 @@
   .product-name {
     height: 23px;
     font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
   }
   .product-price-info {
     margin-top: 0;
   }
   .product-price {
     font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
   }
 }
