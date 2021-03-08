@@ -5,6 +5,9 @@
   box-shadow: 0px 5px 26px -15px rgb(0 0 0 / 16%);
   background-color: $white;
   transition: all .3s;
+  @media (max-width: 767px) {
+    height: 100%;
+  }
 
   .low-price {
     font-size: 0;
