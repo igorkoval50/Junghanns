@@ -19,6 +19,9 @@
     a {
       color: $bread;
     }
+    @media (max-width: 1024px) {
+     padding-left: 20px;
+    }
   }
   .cms-block-text-on-image {
     background-size: unset !important;
@@ -51,11 +54,29 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 5px 26px -15px rgb(0 0 0 / 16%);
-      max-width: 31%;
-      margin-right: 2%;
+      @media (min-width: 767px) {
+        max-width: 31%;
+        margin-right: 2%;
+      }
+      @media (max-width: 767px) {
+        max-width: 300px;
+        margin: 0 auto 20px;
+      }
+      @media (max-width: 991px) {
+        height: 280px;
+      }
       h2 {
         font-size: 24px;
         color: $green;
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
+        @media (max-width: 991px) {
+          font-size: 18px;
+        }
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
       }
       .cms-element-text {
         display: flex;
@@ -67,18 +88,37 @@
       .cms-image-container {
         width: 230px;
         height: 230px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 991px) {
+          font-size: 18px;
+          justify-content: center;
+          width: 150px;
+          height: 150px;
+        }
         .cms-image {
-          width: 100%;
+          width: 150px;
+          height: 150px;
         }
       }
     }
     .col-md-4:last-child {
       margin-right: 0;
+      @media (max-width: 767px) {
+        max-width: 300px;
+        margin: 0 auto 20px;
+      }
     }
   }
   .cms-section.pos-1 {
     .cms-section-default.boxed {
       padding-right: 0;
+      @media (max-width: 1110px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 767px) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -89,6 +129,9 @@
   }
   .cms-section.pos-2 {
     margin-top: 96px;
+    @media (max-width: 1024px) {
+      margin-top: 50px;
+    }
     h2 {
       text-align: center;
     }
@@ -97,16 +140,48 @@
     padding-top: 20px;
     .card-col {
       padding-right: 0;
+      @media (max-width: 1110px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 767px) {
+        max-width: 300px;
+        margin: 0 auto 20px;
+        padding: 0;
+      }
     }
   }
   .cms-block-product-three-column {
+    .col-md-4 {
+      @media (max-width: 1024px) {
+        padding-right: 0;
+      }
+    }
+    .col-md-4:last-child {
+      @media (max-width: 1024px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 767px) {
+        max-width: 300px;
+        margin: 0 auto 20px;
+        padding: 0;
+      }
+    }
     .product-box {
       height: 370px;
+      @media (max-width: 1024px) {
+        height: auto;
+      }
       .card-body {
         padding: 0 0 20px;
       }
       .product-name, .product-price {
         font-size: 18px;
+        @media (max-width: 1024px) {
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
       .product-name {
         margin-bottom: 0;
@@ -114,6 +189,12 @@
       &:hover {
         .low-price {
           font-size: 18px;
+          @media (max-width: 1024px) {
+            font-size: 16px;
+          }
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
         }
       }
       .product-image {
@@ -131,6 +212,9 @@
     background-color: $bgc-white;
     padding: 60px 0 56px;
     margin-top: 50px;
+    @media (max-width: 1024px) {
+      margin-top: 0;
+    }
     .cms-block-image-text-gallery {
       .cms-element-text {
         display: flex;
@@ -140,6 +224,7 @@
           font-weight: bold;
           font-size: 16px;
           color: $subtitle;
+          text-align: center;
         }
       }
       .cms-element-image {
@@ -155,6 +240,12 @@
       h2 {
         font-size: 22px;
         margin-bottom: 0;
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
+        @media (max-width: 991px) {
+          font-size: 18px;
+        }
       }
       .image-text-gallery-card {
         box-shadow: none;
