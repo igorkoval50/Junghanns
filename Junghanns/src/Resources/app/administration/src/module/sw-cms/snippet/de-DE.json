@@ -7,6 +7,9 @@
                 },
                 "fourImages": {
                     "label": "four images and texts"
+                },
+                "imageTextInside": {
+                    "label": "two images and text"
                 }
             },
             "commerce": {
