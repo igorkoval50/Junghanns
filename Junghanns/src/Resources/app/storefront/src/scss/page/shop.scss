@@ -90,6 +90,7 @@
         height: 230px;
         display: flex;
         align-items: center;
+        justify-content: center;
         @media (max-width: 991px) {
           font-size: 18px;
           justify-content: center;
