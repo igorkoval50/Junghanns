@@ -1,4 +1,7 @@
 {
+  "form": {
+    "required":  "*Pflichtfelder"
+  },
   "footer": {
     "hotline": {
       "question": "Sie haben Fragen zu einer Bestellung?",
