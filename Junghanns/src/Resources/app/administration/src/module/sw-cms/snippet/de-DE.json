@@ -12,6 +12,11 @@
                     "label": "two images and text"
                 }
             },
+            "text": {
+                "textFourColumn": {
+                    "label": "four text element column"
+                }
+            },
             "commerce": {
                 "productFourColumn": {
                     "label": "four product column"
