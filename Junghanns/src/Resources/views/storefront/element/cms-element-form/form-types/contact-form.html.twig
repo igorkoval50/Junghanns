@@ -73,15 +73,34 @@
 
         <div class="form-row">
             {% block cms_form_contact_input_subject %}
-                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
-                    with {
-                    required: false,
-                    fieldName: 'subject',
-                    additionalClass: 'd-none',
-                    label: 'contact.subjectLabel',
-                    placeholder: 'contact.subjectPlaceholder'
-                }
-                %}
+                {% block cms_element_form_input %}
+                    {% set fieldName = 'subject' %}
+                    {% set additionalClass = 'd-none' %}
+                    {% set required = false %}
+                    <div class="form-group {{ additionalClass }}">
+                        {% block cms_element_form_input_label %}
+                            <label class="form-label" for="form-{{ fieldName }}">
+                                {{- label|trans -}}{% if required %} {{- "general.required"|trans -}}{% endif %}
+                            </label>
+                        {% endblock %}
+
+                        {% block cms_element_form_input_input %}
+                            <input name="{{ fieldName }}"
+                                   {% if type %}type="{{ type }}"{% endif %}
+                                   id="form-{{ fieldName }}"
+                                   value=" "
+                                   placeholder="{{ placeholder|trans }}"
+                                    {% if required %}required="required"{% endif %}
+                                   class="form-control{% if formViolations.getViolations( '/' ~ fieldName ) %} is-invalid{% endif %}"/>
+
+                            {% if formViolations.getViolations( '/' ~ fieldName ) is not empty %}
+                                {% sw_include '@Storefront/storefront/utilities/form-violation.html.twig' with {
+                                    violationPath: ('/' ~ fieldName)
+                                } %}
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
             {% endblock %}
         </div>
 
