@@ -12,7 +12,7 @@ if (module.hot) {
 
 (function($){
     $('.cms-element-form form').on('submit', function () {
-        if( $('#form-comment').val() === '' && $('#form-firstName').val() !== '' && $('#form-lastName').val() !== '') {
+        if( $('#form-comment').val() === '' && $('#form-firstName').val() !== '' && $('#form-lastName').val() !== '' && $('#form-email').val() !== '') {
             $('#form-comment').val(' ');
         }
     });
